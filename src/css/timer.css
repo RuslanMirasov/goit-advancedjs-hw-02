@@ -1,0 +1,47 @@
+.timer-form input {
+  margin: 0;
+  flex: 1;
+}
+
+.timer-form {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  gap: 8px;
+  max-width: 355px;
+}
+
+.timer {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.field {
+  display: inline-flex;
+  text-align: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.timer .value {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 400;
+}
+
+.timer .label {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+}

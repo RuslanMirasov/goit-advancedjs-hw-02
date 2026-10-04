@@ -7,6 +7,8 @@
   --dark: #000000;
   --white: #ffffff;
   --grey: #f6f6fe;
+  --disabled: #cfcfcf;
+  --disabled-color: #989898;
   --grey-dark: #808080;
 }
 
@@ -136,6 +138,13 @@ h1 {
 .button.red:hover,
 .button.red:focus {
   background-color: var(--red-hover);
+}
+
+.button:disabled {
+  background-color: var(--disabled);
+  pointer-events: none;
+  user-select: none;
+  color: var(--disabled-color);
 }
 
 .go-back {
