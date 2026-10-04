@@ -9,24 +9,33 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <title>Form</title>
+    <title>Snackbar</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <p><a href="./index.html" class="button go-back">Go back</a></p>
 
-    <form class="feedback-form" autocomplete="off">
+    <form class="form">
       <label>
-        Email
-        <input type="email" name="email" autofocus />
+        Delay (ms)
+        <input type="number" name="delay" required />
       </label>
-      <label>
-        Message
-        <textarea name="message" rows="8"></textarea>
-      </label>
-      <button type="submit" class="button">Submit</button>
+
+      <fieldset>
+        <legend>State</legend>
+        <label>
+          <input type="radio" name="state" value="fulfilled" required />
+          Fulfilled
+        </label>
+        <label>
+          <input type="radio" name="state" value="rejected" required />
+          Rejected
+        </label>
+      </fieldset>
+
+      <button type="submit">Create notification</button>
     </form>
 
-    <script type="module" src="./js/2-form.js"></script>
+    <script type="module" src="./js/2-snackbar.js"></script>
   </body>
 </html>
