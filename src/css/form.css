@@ -5,7 +5,7 @@ textarea {
   height: 40px;
   font-family: 'Montserrat';
   max-width: 360px;
-  border-radius: 8px;
+  border-radius: 4px;
   border: 1px solid var(--grey-dark);
   padding: 8px 16px;
   font-size: 16px;
@@ -30,4 +30,90 @@ label {
 input:hover,
 input:focus {
   border: 1px solid var(--dark);
+}
+
+.form {
+  width: 100%;
+  max-width: 360px;
+}
+
+.form fieldset {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
+  padding: 8px;
+  border-radius: 4px;
+}
+.form .button {
+  margin-top: 24px;
+  width: 100%;
+}
+.form input {
+  margin-top: 8px;
+  width: 100%;
+}
+.form fieldset label {
+  display: inline-block;
+  width: auto;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04;
+}
+
+legend {
+  background-color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04;
+  margin-left: 20px;
+  padding: 0px 8px;
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+input[type='radio'] + span {
+  display: inline-flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 14px;
+  cursor: pointer;
+}
+input[type='radio'] + span::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  border: 1px solid #757575;
+  flex-shrink: 0;
+}
+
+input[type='radio'] + span::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  background-color: var(--blue);
+  flex-shrink: 0;
+  opacity: 0;
+}
+
+input[type='radio']:checked + span::before {
+  border: 1px solid var(--blue);
+}
+input[type='radio']:checked + span::after {
+  opacity: 1;
 }
